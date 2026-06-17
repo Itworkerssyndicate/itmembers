@@ -1,0 +1,225 @@
+{
+  "compilerOptions": {
+    // ============================================================
+    // 🏛️ ITWS - نقابة تكنولوجيا المعلومات والبرمجيات
+    // إعدادات TypeScript - الوضع الصارم للأمان القصوى
+    // ============================================================
+
+    // ----------------------------------------------------------
+    // إصدارات JavaScript المستهدفة
+    // ----------------------------------------------------------
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable",
+      "WebWorker",
+      "WebWorker.ImportScripts"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    // ----------------------------------------------------------
+    // وضع التشغيل
+    // ----------------------------------------------------------
+    "jsx": "preserve",
+    "noEmit": true,
+    "allowJs": false,
+    "checkJs": false,
+
+    // ----------------------------------------------------------
+    // إعدادات صارمة للأمان
+    // ----------------------------------------------------------
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "useUnknownInCatchVariables": true,
+
+    // ----------------------------------------------------------
+    // مسارات وقرار
+    // ----------------------------------------------------------
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@app/*": ["./app/*"],
+      "@components/*": ["./components/*"],
+      "@lib/*": ["./lib/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@types/*": ["./types/*"],
+      "@styles/*": ["./styles/*"],
+      "@public/*": ["./public/*"],
+      "@assets/*": ["./assets/*"],
+      "@config/*": ["./config/*"],
+      "@utils/*": ["./utils/*"],
+      "@services/*": ["./services/*"],
+      "@store/*": ["./store/*"],
+      "@middleware/*": ["./middleware/*"]
+    },
+    "rootDir": ".",
+    "outDir": "./dist",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+
+    // ----------------------------------------------------------
+    // التوافق والعزل
+    // ----------------------------------------------------------
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "preserveSymlinks": true,
+    "useDefineForClassFields": true,
+
+    // ----------------------------------------------------------
+    // تحسينات الأداء
+    // ----------------------------------------------------------
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    "removeComments": true,
+    "stripInternal": true,
+    "disableSizeLimit": false,
+    "disableSourceOfProjectReferenceRedirect": false,
+
+    // ----------------------------------------------------------
+    // إعدادات الديكوريتر (للمستقبل)
+    // ----------------------------------------------------------
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false,
+
+    // ----------------------------------------------------------
+    // إعدادات إضافية
+    // ----------------------------------------------------------
+    "pretty": true,
+    "newLine": "lf",
+    "charset": "utf-8",
+    "keyofStringsOnly": false,
+    "maxNodeModuleJsDepth": 2,
+
+    // ----------------------------------------------------------
+    // منع استيراد مكتبات Node.js على جانب العميل
+    // ----------------------------------------------------------
+    "types": [
+      "node",
+      "react",
+      "react-dom",
+      "jest"
+    ],
+
+    // ----------------------------------------------------------
+    // إعدادات التصحيح
+    // ----------------------------------------------------------
+    "sourceMap": false,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "declaration": false,
+    "declarationMap": false,
+
+    // ----------------------------------------------------------
+    // توافق المتصفحات
+    // ----------------------------------------------------------
+    "downlevelIteration": true,
+    "importHelpers": true,
+
+    // ----------------------------------------------------------
+    // إعدادات متقدمة
+    // ----------------------------------------------------------
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "composite": false,
+    "disableReferencedProjectLoad": true,
+    "disableSolutionSearching": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noStrictGenericChecks": false,
+    "preserveConstEnums": true,
+    "resolvePackageJsonExports": true,
+    "resolvePackageJsonImports": true,
+    "verbatimModuleSyntax": false
+  },
+
+  // ============================================================
+  // الملفات والمجلدات المضمنة
+  // ============================================================
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts",
+    "app/**/*",
+    "components/**/*",
+    "lib/**/*",
+    "hooks/**/*",
+    "types/**/*",
+    "config/**/*",
+    "utils/**/*",
+    "services/**/*",
+    "store/**/*",
+    "middleware/**/*",
+    ".next/types/**/*.ts"
+  ],
+
+  // ============================================================
+  // الملفات والمجلدات المستبعدة
+  // ============================================================
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".next",
+    "out",
+    "build",
+    "coverage",
+    "cypress",
+    "public",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/__tests__/**",
+    "**/__mocks__/**",
+    "**/*.stories.ts",
+    "**/*.stories.tsx",
+    "scripts",
+    "firebase",
+    ".firebase",
+    "firebase-debug.log",
+    "ui-debug.log"
+  ],
+
+  // ============================================================
+  // مراجع المشاريع (اختياري - للمشاريع الكبيرة)
+  // ============================================================
+  "references": [],
+
+  // ============================================================
+  // إعدادات TypeScript للتطوير
+  // ============================================================
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": [
+      "**/node_modules",
+      "dist",
+      ".next",
+      "out",
+      "build"
+    ],
+    "excludeFiles": [
+      "**/*.test.ts",
+      "**/*.test.tsx",
+      "**/*.spec.ts",
+      "**/*.spec.tsx"
+    ]
+  }
+}
